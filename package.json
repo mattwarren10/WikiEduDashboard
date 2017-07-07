@@ -142,7 +142,7 @@
     "react-copy-to-clipboard": "^4.1.0"
   },
   "jest": {
-    "collectCoverage": true,
+    "collectCoverage": false,
     "roots": [
       "test",
       "app/assets/javascripts"
