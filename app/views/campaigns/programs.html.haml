@@ -67,5 +67,9 @@
             %th{style: 'width:100px'}
               = t('courses.actions')
       %tbody.list
+      - if @search.nil?
         - @presenter.courses_by_recent_edits.each do |c|
+          = render 'campaigns/course_row', course: c, admin: false, user: false
+      - else
+        - @presenter.search_courses(@keywords).each do |c|
           = render 'campaigns/course_row', course: c, admin: false, user: false
