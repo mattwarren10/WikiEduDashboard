@@ -13,6 +13,12 @@ describe CoursesPresenter do
       expect(subject.trained_count).to eq(1)
       expect(subject.trained_percent).to eq(50.0)
     end
+    context 'search campaign' do
+      it 'returns courses when searching' do
+        q = 'basket-weaving'
+        expect(subject.search_courses(q)).to_not be_nil
+      end
+    end
   end
 
   describe '#user_courses' do
